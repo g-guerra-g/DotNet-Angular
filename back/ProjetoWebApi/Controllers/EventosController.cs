@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ProjetoWebApi.Data;
 using ProjetoWebApi.Models;
 
 namespace ProjetoWebApi.Controllers
@@ -12,42 +13,23 @@ namespace ProjetoWebApi.Controllers
     [Route("api/[controller]")]
     public class EventoController : ControllerBase
     {
+        private readonly DataContext context;
 
-        public IEnumerable<Evento> _evento = new Evento[]{
-            new Evento() {
-                EventoId = 1,
-                Tema = "Angular 11 e .net 5",
-                Local = "São Paulo",
-                Lote = "1",
-                QtdPessoas = 250,
-                DataEvento = DateTime.Now.AddDays(2).ToString(),
-                ImagemURL = "foto.png"
-                },
-            new Evento() {
-                EventoId = 2,
-                Tema = "Angulare suas novidades",
-                Local = "São Paulo",
-                Lote = "2",
-                QtdPessoas = 350,
-                DataEvento = DateTime.Now.AddDays(3).ToString("dd/MM/yyyy"),
-                ImagemURL = "foto.png"
-                }
-        };
-
-        public EventoController()
+        public EventoController(DataContext context)
         {
+            this.context = context;
 
         }
 
         [HttpGet]
         public IEnumerable<Evento> Get()
         {
-            return _evento;
+            return context.Eventos;
         }
         [HttpGet("{id}")]
-        public IEnumerable<Evento> GetByID(int id)
+        public Evento GetByID(int id)
         {
-            return _evento.Where(evento => evento.EventoId == id);
+            return context.Eventos.FirstOrDefault(evento => evento.EventoId == id);
         }
 
         [HttpPost]
