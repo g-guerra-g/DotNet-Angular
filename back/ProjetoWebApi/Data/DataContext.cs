@@ -12,5 +12,6 @@ namespace ProjetoWebApi.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) {}
         public DbSet<Evento> Eventos { get; set; }
+        public DbSet<Palestrante> Palestrantes { get; set;}
     }
 }

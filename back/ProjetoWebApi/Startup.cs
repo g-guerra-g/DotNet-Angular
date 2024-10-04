@@ -31,11 +31,13 @@ namespace ProjetoWebApi
             services.AddDbContext<DataContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
+            services.AddCors();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProjetoWebApi", Version = "v1" });
             });
+        
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,9 +50,15 @@ namespace ProjetoWebApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProjetoWebApi v1"));
             }
 
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(options => options
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()); 
 
             app.UseAuthorization();
 
