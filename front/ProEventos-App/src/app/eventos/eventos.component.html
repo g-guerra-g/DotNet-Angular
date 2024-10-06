@@ -1,9 +1,37 @@
-<p>Conteudo de Eventos</p>
-<div *ngFor="let evento of Evento">
-    <p>Tema Evento: <b>{{evento.tema}}</b></p>
-    <p>Data Evento: <b>{{evento.dataEvento}}</b></p>
-    <p>Quantidade Pessoas: <b>{{evento.qtdPessoas}}</b></p>
-    <p>Local Evento: <b>{{evento.local}}</b></p>
-    <p>Lote Evento: <b>{{evento.lote}}</b></p>
-    <br>
+<h2>Eventos do Components</h2>
+<hr>
+<form action="" class="row row-cols-lg-auto g-3 align-items-center">
+    <div class="form-group mb-2 d-flex">
+        <input type="text" class="form-control mr-3" placeholder="buscar">
+        <button class="btn btn-success mx-2">Buscar</button>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Imagem</th>
+                <th>Tema</th>
+                <th>Local</th>
+                <th>Data</th>
+                <th>Qtd Pessoas</th>
+                <th>Lote</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
