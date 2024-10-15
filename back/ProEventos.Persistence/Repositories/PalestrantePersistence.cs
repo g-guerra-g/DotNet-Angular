@@ -18,7 +18,7 @@ namespace ProEventos.Persistence.Repositories
 
             if (IncludeEventos)
             {
-                query = query.Include(P => P.EventosPalestrantes).ThenInclude(EP => EP.PalestranteId);
+                query = query.Include(P => P.EventosPalestrantes).ThenInclude(EP => EP.Palestrante);
             }
 
             return await query.ToArrayAsync();
@@ -30,7 +30,7 @@ namespace ProEventos.Persistence.Repositories
 
             if (IncludeEventos)
             {
-                query = query.Include(P => P.EventosPalestrantes).ThenInclude(EP => EP.PalestranteId);
+                query = query.Include(P => P.EventosPalestrantes).ThenInclude(EP => EP.Palestrante);
             }
 
             query = query.Where(P => P.Nome == Nome);
@@ -44,7 +44,7 @@ namespace ProEventos.Persistence.Repositories
 
             if (IncludeEventos)
             {
-                query = query.Include(P => P.EventosPalestrantes).ThenInclude(EP => EP.PalestranteId);
+                query = query.Include(P => P.EventosPalestrantes).ThenInclude(EP => EP.Palestrante);
             }
 
             query = query.Where(P => P.Id == ID);
