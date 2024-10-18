@@ -7,7 +7,6 @@ namespace ProEventos.Application.Contracts
         Task<Palestrante> AddPalestrantes(Palestrante model);
         Task<Palestrante> UpdatePalestrante(int IdPalesntrante, Palestrante model);
         Task<Palestrante> DeletePalestrante(int IdPalestrante);
-
         Task<Palestrante[]> GetAllPalestrantes(bool IncludeEventos = false);
         Task<Palestrante[]> GetAllPalestratesByName(string Nome, bool IncludeEventos = false);
         Task<Palestrante> GetPalestranteById(int ID, bool IncludeEventos = false);

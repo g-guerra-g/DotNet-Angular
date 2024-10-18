@@ -10,3 +10,9 @@ C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\obj\Deb
 C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\obj\Debug\net8.0\refint\ProEventos.Application.dll
 C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\obj\Debug\net8.0\ProEventos.Application.pdb
 C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\obj\Debug\net8.0\ref\ProEventos.Application.dll
+C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\obj\Debug\net8.0\ProEventos.Application.csproj.AssemblyReference.cache
+C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\bin\Debug\net8.0\ProEventos.Domain.dll
+C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\bin\Debug\net8.0\ProEventos.Persistence.dll
+C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\bin\Debug\net8.0\ProEventos.Domain.pdb
+C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\bin\Debug\net8.0\ProEventos.Persistence.pdb
+C:\Users\TechnoThugJP\Desktop\DotNet-Angular\back\ProEventos.Application\obj\Debug\net8.0\ProEvent.FC6AB697.Up2Date
